@@ -82,13 +82,20 @@ packages:
       # CORE
       # This package is required and sets up core features.
       - packages/core-esp8266.yaml
-      - packages/alarm-panel/zone1.yaml
-      - packages/alarm-panel/zone2.yaml
+      #- packages/alarm-panel/zone1.yaml
+      #- packages/alarm-panel/zone2.yaml
       - packages/alarm-panel/zone3.yaml
       - packages/alarm-panel/zone4.yaml
       - packages/alarm-panel/zone5.yaml
       - packages/alarm-panel/zone6.yaml
       - packages/alarm-panel/alarm.yaml
+switch:
+  - platform: gpio
+    pin: $zone1
+    name: output1
+  - platform: gpio
+    pin: $zone2
+    name: output2
     
       ####
       # WIFI
